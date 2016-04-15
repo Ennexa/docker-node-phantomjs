@@ -2,8 +2,9 @@ FROM node
 
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends \
-       gperf bison ruby flex \
-       # perl python \
+        gperf bison ruby flex \
+        # perl python \
+        libicu52 libfontconfig1 libjpeg62 libpng12-0 \
         libfontconfig1-dev libicu-dev libfreetype6 libx11-dev libxext-dev \
     && cd /tmp \
     && git clone git://github.com/ariya/phantomjs.git \
